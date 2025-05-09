@@ -1,6 +1,6 @@
 {
-  "name": "leaflet.glify",
-  "version": "3.3.1",
+  "name": "@adrekic/leaflet.glify",
+  "version": "1.0.0",
   "description": "web gl renderer plugin for leaflet",
   "main": "dist/glify.js",
   "browser": "dist/glify-browser.js",
@@ -24,14 +24,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/robertleeplummerjr/Leaflet.glify.git"
+    "url": "git+https://github.com/adrekic/Leaflet.glify.git"
   },
   "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/robertleeplummerjr/Leaflet.glify/issues"
-  },
-  "homepage": "https://github.com/robertleeplummerjr/Leaflet.glify#readme",
   "dependencies": {
     "earcut": "^2.2.4",
     "geojson-flatten": "^1.1.1",
