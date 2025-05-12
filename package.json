@@ -1,6 +1,6 @@
 {
   "name": "@adrekic/leaflet.glify",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "web gl renderer plugin for leaflet",
   "main": "dist/glify.js",
   "types": "dist/src/index.d.ts",
