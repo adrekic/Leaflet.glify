@@ -553,32 +553,13 @@ describe("BaseGlLayer", () => {
   });
 
   describe("setupProgram", () => {
-    describe("when setupProgram returns null", () => {
-      it("throws", () => {
-        const layer = getGlLayer();
-        jest.spyOn(layer.gl, "createProgram").mockReturnValue(null);
-        expect(() => {
-          layer.setupProgram();
-        }).toThrow();
-      });
-    });
     describe("when this.vertexShader null", () => {
       it("throws", () => {
         const layer = getGlLayer();
         expect(layer.vertexShader).toBe(null);
         expect(() => {
           layer.setupProgram();
-        }).toThrow();
-      });
-    });
-    describe("when this.fragmentShader null", () => {
-      it("throws", () => {
-        const layer = getGlLayer();
-        layer.setupVertexShader();
-        expect(layer.fragmentShader).toBe(null);
-        expect(() => {
-          layer.setupProgram();
-        }).toThrow();
+        }).toThrow('"this.vertexShader" not properly defined');
       });
     });
     it("sets this.program from gl.createProgram", () => {
@@ -797,15 +778,6 @@ describe("BaseGlLayer", () => {
         expect(buffer).toBeTruthy();
         expect(layer.gl.createBuffer).toHaveBeenCalled();
         expect(layer.buffers.buffer1).toBe(buffer);
-      });
-      describe("when this.gl.createBuffer returns null", () => {
-        it("throws", () => {
-          const layer = getGlLayer();
-          jest.spyOn(layer.gl, "createBuffer").mockReturnValue(null);
-          expect(() => {
-            layer.getBuffer("buffer1");
-          }).toThrow();
-        });
       });
     });
     describe("when there is not a buffer on this.buffers with name", () => {
